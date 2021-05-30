@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-
 // @route       GET api/auth
 // @desc        Get Logged In User
 // @access      Private
