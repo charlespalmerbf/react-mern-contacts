@@ -8,7 +8,7 @@ const About = () => {
             
             <h1> About This App </h1>
 
-            <p className="my-1"> This is a Full Stack React App For Keeping Contacts </p>
+            <p className="my-1"> This is a Full Stack React App For Keeping Contacts. </p>
 
             <p className="bg-dark p"> <strong> Version: </strong> 1.0.0 </p>
 

@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Navbar from './components/layout/Navbar';
+import ContactState from './context/contact/ContactState';
 
 const App = () => {
 
   return (
+
+    <ContactState>
 
     <Router>
 
@@ -30,6 +33,8 @@ const App = () => {
       </Fragment>
 
     </Router>
+
+    </ContactState>
 
   )
 
