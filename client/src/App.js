@@ -6,8 +6,10 @@ import About from './components/pages/About';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Navbar from './components/layout/Navbar';
+import Alerts from './components/layout/Alerts';
 import ContactState from './context/contact/ContactState';
 import AuthState from './context/auth/AuthState';
+import AlertState from './context/alert/AlertState';
 
 const App = () => {
 
@@ -17,6 +19,8 @@ const App = () => {
 
     <ContactState>
 
+    <AlertState>
+
     <Router>
 
       <Fragment>
@@ -24,6 +28,8 @@ const App = () => {
         <Navbar />
 
         <div className="container">
+
+          <Alerts />
 
             <Switch>
 
@@ -42,6 +48,8 @@ const App = () => {
       </Fragment>
 
     </Router>
+
+    </AlertState>
 
     </ContactState>
 
