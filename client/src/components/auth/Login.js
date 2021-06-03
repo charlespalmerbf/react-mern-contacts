@@ -1,6 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import AuthContext from '../../context/auth/authContext';
+import AlertContext from '../../context/alert/alertContext';
 
-const Login = () => {
+const Login = (props) => {
+
+    const alertContext = useContext(AlertContext);
+
+    const authContext = useContext(AuthContext);
+
+    const { setAlert } = alertContext;
+
+    const { login, error, clearError, isAuthenticated } = authContext;
+
+    useEffect(() => {
+
+        if (isAuthenticated) {
+            
+            props.history.push('/');
+
+        }
+
+        if(error === 'Invalid Credentials') {
+
+            setAlert(error, 'danger');
+
+            clearError();
+
+        }
+
+    });
 
     const [user, setUser] = useState({
 
@@ -17,7 +45,20 @@ const Login = () => {
 
         e.preventDefault();
 
-        console.log('Login Submit');
+        if (email === '' || password ==='') {
+            
+            setAlert('Please Fill In All Fields.', 'danger');
+
+        } else {
+
+            login({
+
+                email,
+                password
+
+            });
+
+        }
 
     }
 

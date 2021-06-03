@@ -20,7 +20,7 @@ const Register = (props) => {
 
         }
 
-        if(error === 'User Already Exists.') {
+        if(error === 'User Already Exists') {
 
             setAlert(error, 'danger');
 
