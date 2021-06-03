@@ -7,6 +7,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Navbar from './components/layout/Navbar';
 import Alerts from './components/layout/Alerts';
+import PrivateRoute from './components/routing/PrivateRoute';
 import setAuthToken from './utils/setAuthToken';
 import ContactState from './context/contact/ContactState';
 import AuthState from './context/auth/AuthState';
@@ -40,7 +41,7 @@ const App = () => {
 
             <Switch>
 
-                <Route exact path = '/' component={Home} />
+                <PrivateRoute exact path = '/' component={Home} />
 
                 <Route exact path = '/about' component={About} />
 
